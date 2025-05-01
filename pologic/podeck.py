@@ -311,8 +311,8 @@ class PDeck:
 
         if possible_straight_flush:                             top_rank = 8 # straight flush
         elif 4 in n_fig:                                        top_rank = 7 # four of
-        elif (3 in n_fig and 2 in n_fig) or n_fig.count(3) > 1: top_rank = 6 # full house
         elif col_cards:                                         top_rank = 5 # flush
+        elif (3 in n_fig and 2 in n_fig) or n_fig.count(3) > 1: top_rank = 6 # full house
         elif possible_straight:                                 top_rank = 4 # straight
         elif 3 in n_fig:                                        top_rank = 3 # three of
         elif n_fig.count(2) > 1:                                top_rank = 2 # two pairs

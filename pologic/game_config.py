@@ -67,3 +67,22 @@ class GameConfig:
 
         return cls(name=name, **config)
 
+    @classmethod
+    def short_deck(cls) -> "GameConfig":
+        """ Returns a GameConfig instance for 6+ short deck poker with flush > full house """
+        name = "short_deck"
+        table_size = 6
+        table_cash_start = 100
+        table_cash_sb = 1
+        table_cash_bb = 2
+        table_moves = [
+            ("FLD", 0, 0),
+            ("CCK", 0, 0),
+            ("CLL", 0, 0),
+            ("BRM", 0, 0),
+            ("BR1", 0.5, 0),
+            ("BR2", 1, 0),
+            ("BR3", 2, 0),
+            ("BRA", 0, 0)
+        ]
+        return cls(name, table_size, table_cash_start, table_cash_sb, table_cash_bb, table_moves)
