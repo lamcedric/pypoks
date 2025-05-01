@@ -543,7 +543,7 @@ class QueDMK(MeTrainDMK, ABC):
 
         self._reset_processFWD_stats_data()
 
-    def _reset_processFWD_stats_data(self) -> None:
+    def _reset_processFWD_stats_data() -> None:
         self._processFWD_stats_data = {
             '0.requestedF':        [], # List[float] - factor of players that send request for a decision in this loop
             '1.waitingF':          [], # List[float] - factor of waiting players
